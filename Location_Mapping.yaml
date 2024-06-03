@@ -1,0 +1,30 @@
+---
+# The following NetBox locations, location Ids and sites are known.
+# Assign a location id to the Catalyst Center devices listed below.
+
+#Location `3rd Floor                       ` of site `Mandalay Bay        ` is locationId 522
+#Location `Marquee                         ` of site `MGM                 ` is locationId 518
+#Location `GGA-StudioBall                  ` of site `MGM                 ` is locationId 517
+#Location `Luxor                           ` of site `Luxor               ` is locationId 512
+#Location `TBD                             ` of site `MGM                 ` is locationId 519
+#Location `1st Floor (World of Solutions)  ` of site `Mandalay Bay        ` is locationId 520
+#Location `Jason's house                   ` of site `Jason's house       ` is locationId 509
+#Location `South Level 1                   ` of site `Mandalay Bay        ` is locationId 526
+#Location `TBD                             ` of site `Mandalay Bay        ` is locationId 525
+#Location `2nd Floor                       ` of site `MGM                 ` is locationId 515
+#Location `Four Seasons Hotel              ` of site `Four Seasons Hotel  ` is locationId 510
+#Location `2nd Floor                       ` of site `Mandalay Bay        ` is locationId 521
+#Location `TBD                             ` of site `Four Seasons Hotel  ` is locationId 511
+#Location `TBD                             ` of site `Luxor               ` is locationId 513
+#Location `L1 - NOC                        ` of site `Mandalay Bay        ` is locationId 523
+#Location `Lower Level                     ` of site `Mandalay Bay        ` is locationId 524
+#Location `1st Floor                       ` of site `MGM                 ` is locationId 514
+#Location `3rd Floor                       ` of site `MGM                 ` is locationId 516
+
+
+#Catalyst Center devices
+devices:
+  sw1/10.10.20.175: 522
+  sw2/10.10.20.176: 509
+  sw3/10.10.20.177: 523
+  sw4/10.10.20.178: 516

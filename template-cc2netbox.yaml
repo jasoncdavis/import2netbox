@@ -1,0 +1,26 @@
+# cc2netbox.yaml
+# Configuration options for Catalyst Center to NetBox (cc2netbox) 
+# project in DevNet and CiscoLive NOC
+# - contains target endpoint names/IPs, credentials, etc.
+
+# Catalyst Center (formerly DNA Center (DNAC))
+CatalystCenter:
+  host: sandboxdnac.cisco.com      # Set as IP address, if DNS is incomplete
+  alias: sandboxdnac.cisco.com
+  protocol: https
+  port: 443
+  DNA_CENTER_DEBUG: False    #Tells the SDK whether to log request and response information. Useful for debugging and seeing what is going on under the hood. Defaults to False.
+  DNA_CENTER_VERSION: 2.3.3.0    # DNA Center API version to use. Defaults to '2.1.1'.
+  DNA_CENTER_ENCODED_AUTH:       # It takes priority. It is the username:password encoded in base 64. For example ZGV2bmV0dXNlcjpDaXNjbzEyMyE which decoded is devnetuser:Cisco123!
+  DNA_CENTER_USERNAME: devnetuser    # HTTP Basic Auth username.
+  DNA_CENTER_PASSWORD: Cisco123!    # HTTP Basic Auth password.
+  DNA_CENTER_VERIFY: False   # Controls whether to verify the server's TLS certificate or not. Defaults to True.
+
+
+# NetBox
+NetBox:
+  scheme: https
+  server: CHANGEME
+  port: 443
+  verify_SSL: False
+  NETBOX_API_TOKEN: CHANGEME

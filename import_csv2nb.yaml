@@ -1,0 +1,7 @@
+# buildnetbox project YAML file with environment parameters and creds
+
+NetBox:
+  server: CHANGEME
+  scheme: https
+  port: 443
+  NETBOX_API_TOKEN: CHANGEME

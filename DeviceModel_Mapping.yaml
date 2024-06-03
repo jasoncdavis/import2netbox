@@ -1,0 +1,34 @@
+---
+devices:
+  # For Catalyst Center platformId "C9KV-UADP-8P" modify 'CHANGE_ME' to a devicetypeId from
+  # the known, supported NetBox device-types below or '99999' to create a new type
+  #   Match    NetBox Known                                        NetBox Known
+  #  _Factor_  _model name ______________________________________  _part number _____________ _(devicetypeId)_
+  #    100     Cisco Catalyst 9000 UADP 8 Port Virtual Switch      C9KV-UADP-8P                    1385
+  #     67     Catalyst Digital Building Switch (PoE+)             CDB-8P                          1092
+  #     50     Catalyst 2960CPD-8PT                                WS-C2960CPD-8PT                 1290
+  #     50     Catalyst Digital Building Switch (UPoE)             CDB-8U                           817
+  #     45     891fw                                               C891FW-A-K9                     1359
+  #     45     Catalyst 9300-48P-E                                 C9300-48P-E                      990
+  #     44     C9200-24P                                           C9200-24P                        756
+  #     44     C9200-48P                                           C9200-48P                        980
+  #     44     Catalyst 9300-24P                                   C9300-24P                        697
+  #     44     Catalyst 9300-24U                                   C9300-24U                       1189
+  C9KV-UADP-8P: 1385
+
+  # For Catalyst Center platformId "C9136" modify 'CHANGE_ME' to a devicetypeId from
+  # the known, supported NetBox device-types below or '99999' to create a new type
+  #   Match    NetBox Known                                        NetBox Known
+  #  _Factor_  _model name ______________________________________  _part number _____________ _(devicetypeId)_
+  #     80     Catalyst 9130AXI-B                                  C9130AXI-B                      1252
+  #     80     Catalyst 9130AXI-E                                  C9130AXI-E                       878
+  #     80     Meraki CW9162                                       CW9162                          1264
+  #     80     Meraki CW9164                                       CW9164                          1119
+  #     80     Meraki CW9166                                       CW9166                           932
+  #     80     Nexus 9316D-GX                                      N9K-C9316D-GX                    967
+  #     80     Nexus 9336C-FX2                                     N9K-C9336C-FX2                   983
+  #     80     Nexus 9336PQ                                        N9K-C9336PQ                     1344
+  #     80     Nexus 93600CD-GX                                    N9K-C93600CD-GX                  896
+  #     80     Nexus 9364C                                         N9K-C9364C                       773
+  C9136: CHANGE_ME
+
