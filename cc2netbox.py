@@ -4,13 +4,15 @@
     device inventory into NetBox using PyPi package pynetbox
 
     Args:
-    usage: cc2netbox.py [-h] [-d] ***
+    usage: cc2netbox.py [-h] [-d] [--stage2]
 
     TO-DO Description
 
     options:
-    -h, --help            show this help message and exit
-    -d, --debug           Enables debug with copious console output, but none to InfluxDB
+    -h, --help         show this help message and exit
+    -d, --debug        Enables debug with copious console output
+    --stage2           Run second stage discovery process; done on second
+                       iteration
     
     Inputs/Reference files:
         cc2netbox.yaml - contains Catalyst Center service specs -
@@ -22,7 +24,6 @@
         polls.  Running in 'debug mode' will provide much more detailed
         information
 
-
     Caveats:
         Must run in Python 3.11 or lower (higher than 3.9 preferrable)
         because Python 3.12 breaks module 'imp' import with dnacentersdk
@@ -31,10 +32,12 @@
         
     Version History:
     1   2024-0522   Initial development
+    2   2024-0617   Remove hard-coded device-model types (gh issue 1)
+                    Update Usage/args docs
 """
 
 # Credits:
-__version__ = '1'
+__version__ = '2'
 __author__ = 'Jason Davis - jadavis@cisco.com'
 __license__ = "'Apache License, Version 2.0 - ' \
     'http://www.apache.org/licenses/LICENSE-2.0'"
@@ -193,7 +196,6 @@ def get_fuzzy_matches(device, nb_devicetypes):
     return record
 
 
-
 def generate_devicemodel_mapping_file(cc_devices, nb_devicetypes):
     # Creates a CC device to NB device-model mapping
     print(f"Several Catalyst Center device models need to be mapped "
@@ -207,7 +209,6 @@ def generate_devicemodel_mapping_file(cc_devices, nb_devicetypes):
     device_mapping = """---
 devices:
 """
-    unique_cc_devicetypes = ['C9KV-UADP-8P', 'C9136']
     for devicetype in unique_cc_devicetypes:
         device_mapping += get_fuzzy_matches(devicetype, nb_devicetypes)
         #print(fuzzymatches)
@@ -215,7 +216,7 @@ devices:
     with open("DeviceModel_Mapping.yaml", "w") as file1:
         # Writing data to a file
         file1.writelines(device_mapping)
-    
+
 
 def process_devicemodels(devices, nb):
     # Take devices information, extract device-models from CC understanding,
@@ -293,6 +294,7 @@ def get_cc_devices():
         return devices['response']
     else:
         return None
+
 
 def get_cli_args():
     # Process Command Line arguments
